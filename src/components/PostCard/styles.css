@@ -1,8 +1,10 @@
 .post {
-  background: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background: #1A1A1D;
+  box-shadow: 0 0 10px rgba(255, 255 255, 0.8);
   border-radius: 5px;
   transition: transform 100ms ease-in-out;
+  color: #fff;
+  box-shadow: 0 0 2px rgba(255, 255, 255, 0.1);
 }
 
 .post:hover {
@@ -15,4 +17,14 @@
 
 .post-content {
   padding: 20px;
+}
+
+.post-content h2 {
+  letter-spacing: 1.5px;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.post-content p {
+  color: #bebebe;
 }

@@ -2,7 +2,7 @@
   max-width: 1200px;
   margin: 0 auto;
   min-height: 100vh;
-  background: #eee;
+  background: #292929;
   padding: 30px;
 }
 
@@ -16,6 +16,12 @@
   margin-bottom: 30px;
 }
 
-.search-container h1 {
+.search-container small {
   margin-bottom: 20px;
+  color: #BEBEBE;
+  font-size: 15px;
+}
+
+.no-posts {
+  color: #fff;
 }

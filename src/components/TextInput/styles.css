@@ -1,5 +1,15 @@
 .text-input {
   width: 100%;
-  font-size: 30px;
+  font-size: 20px;
   padding: 5px 10px;
+  color: #fff;
+  border: none;
+  background: transparent;
+  border-bottom: 2px solid rgb(172, 172, 172);
+  outline: 0;
+  transition: all 200ms ease-in-out;
+}
+
+.text-input:focus {
+  border-bottom: 2px solid rgba(0, 255, 55, 0.329);
 }
