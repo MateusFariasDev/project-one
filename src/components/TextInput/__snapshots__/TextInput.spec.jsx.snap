@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TextInput /> should match snapshot 1`] = `
+<div>
+  <div
+    class="header"
+  >
+    <div
+      class="logo"
+    >
+      Coda
+      <span>
+        Dev
+      </span>
+    </div>
+    <div
+      class="search-bar"
+    >
+      <input
+        class="text-input"
+        placeholder="Type your search"
+        type="search"
+        value=""
+      />
+    </div>
+  </div>
+  <hr />
+</div>
+`;

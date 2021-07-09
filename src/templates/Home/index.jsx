@@ -1,3 +1,4 @@
+import React from 'react';
 import { useCallback, useEffect, useState } from 'react';
 
 import './styles.css';
@@ -16,18 +17,18 @@ export const Home = () => {
 
   const noMorePosts = page + postsPerPage >= allPosts.length;
 
-  const filteredPosts = !!searchValue ?
-    allPosts.filter(post => {
-      return post.title.toLowerCase().includes(searchValue.toLowerCase());
-    })
+  const filteredPosts = searchValue
+    ? allPosts.filter((post) => {
+        return post.title.toLowerCase().includes(searchValue.toLowerCase());
+      })
     : posts;
 
   const handleLoadPosts = useCallback(async (page, postsPerPage) => {
     const postsAndPhotos = await loadPosts();
 
-    setPosts(postsAndPhotos.slice(page, postsPerPage))
-    setAllPosts(postsAndPhotos)
-  }, [])
+    setPosts(postsAndPhotos.slice(page, postsPerPage));
+    setAllPosts(postsAndPhotos);
+  }, []);
 
   useEffect(() => {
     handleLoadPosts(0, postsPerPage);
@@ -40,43 +41,31 @@ export const Home = () => {
 
     setPosts(posts);
     setPage(nextPage);
-  }
+  };
 
   const handleChange = (e) => {
     const { value } = e.target;
     setSearchValue(value);
-  }
+  };
 
   return (
     <section className="container">
       <div className="search-container">
         <TextInput searchValue={searchValue} handleChange={handleChange} />
 
-        {!!searchValue && (
-          <small>Search value: {searchValue}</small>
-        )}
+        {!!searchValue && <small>Search value: {searchValue}</small>}
       </div>
 
-      {filteredPosts.length > 0 && (
-        <Posts posts={filteredPosts} />
-      )}
+      {filteredPosts.length > 0 && <Posts posts={filteredPosts} />}
 
-      {filteredPosts.length === 0 && (
-        <p className="no-posts">Não existem posts =(</p>
-      )}
+      {filteredPosts.length === 0 && <p className="no-posts">Não existem posts =(</p>}
 
       <div className="button-container">
-        {!searchValue && (
-          <Button
-            text="Load more posts"
-            onClick={loadMorePosts}
-            disabled={noMorePosts}
-          />
-        )}
+        {!searchValue && <Button text="Load more posts" onClick={loadMorePosts} disabled={noMorePosts} />}
       </div>
     </section>
-  )
-}
+  );
+};
 
 // Componentes de classe
 // export class Home extends Component {

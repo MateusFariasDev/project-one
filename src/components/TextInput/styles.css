@@ -1,3 +1,28 @@
+.header {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.logo {
+  color: #bebebe;
+  font-size: 20px;
+  margin-right: 30px;
+}
+
+.logo span {
+  color: #fff;
+}
+
+hr {
+  width:100%;
+  margin:0 auto;
+  border:0px none white;
+  border-top:1px solid #2e343b;
+}
+
 .text-input {
   width: 100%;
   font-size: 20px;
@@ -5,11 +30,11 @@
   color: #fff;
   border: none;
   background: transparent;
-  border-bottom: 2px solid rgb(172, 172, 172);
+  border-bottom: 1px solid rgb(172, 172, 172);
   outline: 0;
   transition: all 200ms ease-in-out;
 }
 
 .text-input:focus {
-  border-bottom: 2px solid rgba(0, 255, 55, 0.329);
+  border-bottom: 1px solid rgba(0, 255, 55, 0.329);
 }
