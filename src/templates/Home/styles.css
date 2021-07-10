@@ -3,7 +3,7 @@
   margin: 0 auto;
   min-height: 100vh;
   background: #292929;
-  padding: 30px;
+  padding: 20px 30px 30px 30px;
 }
 
 .button-container {
@@ -16,10 +16,11 @@
   margin-bottom: 30px;
 }
 
-.search-container small {
+.search-container h1 {
   margin-bottom: 20px;
   color: #BEBEBE;
   font-size: 15px;
+  font-weight: normal;
 }
 
 .no-posts {
